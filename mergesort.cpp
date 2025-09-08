@@ -78,8 +78,4 @@ int main(){
     mergeSort(array,0,n-1);
     cout<<"Sorted array is ";
     printArray(array,n);
-
-
-    
-
 }
