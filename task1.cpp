@@ -14,3 +14,4 @@ int main(){
     cout<<num<<endl;
     cout<<&ptr<<endl;
 }
+
