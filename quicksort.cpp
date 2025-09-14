@@ -1,39 +1,50 @@
 // quick sort
 
 #include <iostream>
-#include <algorithm>
 using namespace std;
 
-int partition(int arr[], int low, int high) {
-    int pivot = arr[high]; // pivot
-    int i = low - 1; // Index of smaller element
+int partition(int array[],int low,int high) {
+    int pivot=array[high];// pivot
+    int i=low-1; // Index of smaller element
 
-    for (int j = low; j < high; j++) {
-        if (arr[j] < pivot) {
+    for(int j=low;j<high;j++){
+        if (array[j]<pivot){
             i++;
-            swap(arr[i], arr[j]);
+            swap(array[i], array[j]);
         }
     }
-    swap(arr[i + 1], arr[high]);
+    swap(array[i + 1],array[high]);
     return i + 1;
 }
 
-void quickSort(int arr[], int low, int high) {
-    if (low < high) {
-        int pi = partition(arr, low, high);
+void quickSort(int array[],int low,int high){
+    if(low<high){
+        int pi=partition(array,low,high);
 
-        quickSort(arr, low, pi - 1);
-        quickSort(arr, pi + 1, high);
+        quickSort(array,low,pi-1);
+        quickSort(array,pi+1,high);
     }
 }
-
-int main() {
-    int arr[] = {10, 7, 8, 9, 1, 5};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    quickSort(arr, 0, n - 1);
-    cout << "Sorted array: ";
+void printarray(int array[],int n){
     for (int i = 0; i < n; i++)
-        cout << arr[i] << " ";
-    cout << endl;
+        {
+            cout<<array[i]<<" ";
+        }
+}
+int main() {
+    int n;
+    cout<<"Enter the number of element: ";
+    cin>>n;
+    int array[n];
+    cout<<"Enter the "<<n<<" element : ";
+    for(int i=0;i<n;i++){
+       cin>>array[i];
+    }
+    cout<<"The element of array is : ";
+    printarray(array,n);
+    cout<<endl;
+    quickSort(array, 0, n - 1);
+    cout<<"Sorted array: ";
+    printarray(array,n);
     return 0;
 }

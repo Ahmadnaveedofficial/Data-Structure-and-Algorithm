@@ -1,7 +1,9 @@
-/* implement a dymanic array that automatically resize its self when the number of element exceeds its capaicty
-create a function to:
-add element to te dynamic array
-display the element of the dynamic array */
+/* Task 4:
+Implement a dynamic array that automatically resizes itself when the number of elements exceeds its capacity.
+Create functions to:
+Initialize the dynamic array.
+Add elements to the dynamic array.
+Display the elements of the dynamic array */
 
 
 #include <iostream>

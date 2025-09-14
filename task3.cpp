@@ -1,7 +1,8 @@
-/*create a array of integer with the size of 5
-use a loop to fill the array of element with the consective even number starting from 2
-create a pointer that point the first elemt of array 
-use a loop to print the element of array using pointer*/
+/*Task 3:
+Create an array of integers with a size of 5.
+Use a loop to fill the array with consecutive even numbers starting from 2.
+Create a pointer that points to the first element of the array.
+Use a loop to print the elements of the array using the pointer.*/
 #include<iostream>
 using namespace std;
 int main(){
