@@ -57,6 +57,7 @@ int main() {
      insertAtStart("Talha",102,2.6);
     insertAtStart("Mohsin",103,3.7);
     insertAtEnd("Ahmad",101,3.9);
+    insertAtEnd("Ali",105,3.5);
     insertAtStart("Saqib",104,2.8);
     display();
     return 0;
