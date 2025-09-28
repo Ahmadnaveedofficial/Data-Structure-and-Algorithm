@@ -63,6 +63,9 @@ class Node{
                     NewNode->next=temp->next;
                     temp->next=NewNode;
                 }
+                else{
+                    cout<<"Invalid Position"<<endl;
+                }
             }
         }
 
@@ -132,7 +135,7 @@ int main() {
     myList.insertAtPosition("Hassan",106,3.2,3);
     myList.insertAtPosition("Ahsan",107,3.1,1);
     myList.insertAtPosition("Haris",108,3.4,10); // Invalid Position
-    myList.deleteAtPosition(2);
+    //myList.deleteAtPosition(2);
     myList.display();
     return 0;
 }
