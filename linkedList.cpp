@@ -124,6 +124,24 @@ class Node{
           temp=temp->next;
       }
   }
+  void sortLinkedList(){
+    if(head==NULL){
+        return;
+    }
+    for (Node* i=head;i!=NULL; i=i->next)
+    {
+        for(Node*j=head;j!=NULL;j=j->next){
+             if (i->cgpa<j->cgpa)
+             {
+                swap(i->cgpa,j->cgpa);
+                swap(i->name,j->name);
+                swap(i->roll,j->roll);
+             }
+             
+        }
+    }
+    
+  }
 };
 int main() {
      List myList;
@@ -136,6 +154,10 @@ int main() {
     myList.insertAtPosition("Ahsan",107,3.1,1);
     myList.insertAtPosition("Haris",108,3.4,10); // Invalid Position
     //myList.deleteAtPosition(2);
+    cout<<"Before Sorting"<<endl;
+    myList.display();
+    cout<<"After Sorting"<<endl;
+    myList.sortLinkedList();
     myList.display();
     return 0;
 }
