@@ -141,23 +141,165 @@ class LinkedList{
       head = middleNode;
 }
 
+void sorting() {
+    if (!head||!head->next) {
+        cout<<"List contains one or no elements"<<endl;
+        return;
+    }
+
+    Node* sorted=NULL;
+    Node* current=head;
+
+    while(current!=NULL){
+        Node* nextNode=current->next;
+        if(sorted==NULL||sorted->data>=current->data) {
+            current->next = sorted;
+            sorted = current;
+        } else {
+            Node* temp=sorted;
+            while(temp->next!=NULL&&temp->next->data< current->data) {
+                temp=temp->next;
+            }
+            current->next=temp->next;
+            temp->next=current;
+        }
+
+        current=nextNode;
+    }
+
+    head=sorted;
+}
+void removeDuplicates() {
+    if (!head) return; 
+    
+    Node* current = head;
+    while (current->next != NULL) {
+        if (current->data == current->next->data) {
+            Node* duplicate = current->next;
+            current->next = current->next->next; 
+            delete duplicate; 
+        } else {
+            current = current->next; 
+        }
+    }
+}
+
+void swapNodes(){
+  if (head==NULL || head->next==NULL){
+    return;
+  }
+  Node* first=head;
+  Node* Second=head->next;
+  Node* prev=NULL;
+  while(first!=NULL&& Second!=NULL){
+    Node* third=Second->next;
+    Second->next=first;
+    first->next=third;
+    if(prev!=NULL){
+          prev->next=Second;
+    }else{
+      head=Second;
+    }
+    prev=first;
+    first=third;
+    if(third!=NULL){
+      Second=third->next;
+    }else{
+      Second=NULL;
+    }
+  }
+  
+  }
+  void evenOdd() {
+    Node* head1 = NULL;
+    Node* head2 = NULL;
+    Node* tail1 = NULL;
+    Node* tail2 = NULL;
+
+    Node* temp = head;
+    while (temp != NULL) {
+        if (temp->data % 2 == 0) {
+            if (head1 == NULL) {
+                head1 = temp;
+                tail1 = temp;
+            } else {
+                tail1->next = temp;
+                tail1 = tail1->next;
+            }
+        } else {
+            if (head2 == NULL) {
+                head2 = temp;
+                tail2 = temp;
+            } else {
+                tail2->next = temp;
+                tail2 = tail2->next;
+            }
+        }
+        temp = temp->next;
+    }
+
+    if (tail1 != NULL) {
+        tail1->next = head2;
+        if (tail2 != NULL)
+            tail2->next = NULL;
+        head = head1;
+    } else {
+        tail2->next = NULL;
+        head = head2;
+    }
+}
+
+  void reverseList(){
+    Node*prev=NULL;
+    Node*current=head;
+    Node*next=NULL;
+    while(current!=NULL){
+      next=current->next;
+      current->next=prev;
+      prev=current;
+      current=next;
+    }
+    head=prev;
+  }
 
 };
 
 int main(){
   LinkedList li;
   cout<<"Inserting nodes..."<<endl;
-  li.insertNode(1);
-  li.insertNode(2);
-  li.insertNode(4);
-  li.insertNode(1);
-  li.insertNode(2);
-  li.insertNode(3);
+  // li.insertNode(1);
+  // li.insertNode(2);
+  // li.insertNode(4);
+  // li.insertNode(1);
+  // li.insertNode(2);
+  // li.insertNode(3);
+  // li.insertNode(4);
   
-  li.displayList();
-  cout<<endl;
-  li.middleNode(true);
+  // li.displayList();
+  // cout<<endl;
+  // li.middleNode(true);
 
-  li.makeMiddleHead(false);
+  // li.makeMiddleHead(false);
+  // li.displayList();
+  // cout<<endl;
+  // li.sorting();
+  // li.displayList();
+  cout<<endl;
+  // li.removeDuplicates();
+  // li.displayList();
+  cout<<endl;
+  // li.swapNodes();
+  // li.displayList();
+li.insertNode(1);
+li.insertNode(2);
+li.insertNode(3);
+li.insertNode(4);
+li.insertNode(5);
+li.displayList();
+cout<<endl;
+li.reverseList();
+li.displayList();
+cout<<endl;
+  li.evenOdd();
   li.displayList();
 }
