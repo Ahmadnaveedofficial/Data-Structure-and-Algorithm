@@ -169,6 +169,8 @@ void sorting() {
 
     head=sorted;
 }
+
+
 void removeDuplicates() {
     if (!head) return; 
     
@@ -208,6 +210,7 @@ void swapNodes(){
       Second=NULL;
     }
   }
+
   
   }
   void evenOdd() {
@@ -237,7 +240,6 @@ void swapNodes(){
         }
         temp = temp->next;
     }
-
     if (tail1 != NULL) {
         tail1->next = head2;
         if (tail2 != NULL)
@@ -267,39 +269,110 @@ void swapNodes(){
 int main(){
   LinkedList li;
   cout<<"Inserting nodes..."<<endl;
+  // li.insertNode(8);
   // li.insertNode(1);
-  // li.insertNode(2);
-  // li.insertNode(4);
-  // li.insertNode(1);
-  // li.insertNode(2);
   // li.insertNode(3);
   // li.insertNode(4);
-  
+  // li.insertNode(2);
+  // li.insertNode(1); 
   // li.displayList();
   // cout<<endl;
-  // li.middleNode(true);
+  // li.middleNode(false);
+
+
+  // li.insertNode(8);
+  // li.insertNode(1);
+  // li.insertNode(3); 
+  // li.insertNode(4);
+  // li.insertNode(3);
+  // li.insertNode(1);
+  // li.displayList();
+  // cout<<endl;
+  // li.makeMiddleHead(false);
+  // li.displayList();
+
+  
+  // li.insertNode(3);
+  // li.insertNode(8);
+  // li.insertNode(3);
+  // li.insertNode(2);
+  // li.insertNode(4);
+  // li.displayList();
+  // cout<<endl;
+  // li.sorting();
+  // li.displayList();
+  
+  // li.insertNode(8);
+  // li.insertNode(3); 
+  // li.insertNode(3);
+  // li.insertNode(2);
+  // li.insertNode(2);
+  // li.displayList();
+  // cout<<endl;
+  // li.removeDuplicates();
+  // li.displayList();
+ 
+  // li.insertNode(6);
+  // li.insertNode(5);
+  // li.insertNode(8);
+  // li.insertNode(4);
+  // li.insertNode(2);
+  // li.insertNode(1);
+  // li.displayList();
+  // cout<<endl;
+  // li.swapNodes();
+  // li.displayList();
+
+
+  
+  // li.insertNode(0);
+  // li.insertNode(2);
+  // li.insertNode(3);
+  // li.insertNode(2);
+  // li.insertNode(1);
+  // li.displayList();
+  // cout<<endl;
+  // li.evenOdd();
+  // li.displayList();
+
+
+  li.insertNode(0);
+  li.insertNode(9);
+  li.insertNode(3);
+  li.insertNode(2);
+  li.insertNode(1);
+  li.displayList();
+  cout<<endl;
+  li.reverseList();
+  li.displayList();
+
+
+
+
 
   // li.makeMiddleHead(false);
   // li.displayList();
   // cout<<endl;
   // li.sorting();
   // li.displayList();
-  cout<<endl;
+  // cout<<endl;
   // li.removeDuplicates();
   // li.displayList();
-  cout<<endl;
+  // cout<<endl;
   // li.swapNodes();
   // li.displayList();
-li.insertNode(1);
-li.insertNode(2);
-li.insertNode(3);
-li.insertNode(4);
-li.insertNode(5);
-li.displayList();
-cout<<endl;
-li.reverseList();
-li.displayList();
-cout<<endl;
-  li.evenOdd();
-  li.displayList();
+  // li.insertNode(3);
+  // li.insertNode(4);
+// li.insertNode(1);
+// li.insertNode(2);
+// li.insertNode(3);
+// li.insertNode(4);
+// li.insertNode(5);
+// li.displayList();
+// cout<<endl;
+// li.reverseList();
+// li.displayList();
+// cout<<endl;
+//   li.evenOdd();
+//   li.displayList();
 }
