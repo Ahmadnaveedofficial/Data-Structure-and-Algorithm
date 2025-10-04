@@ -266,7 +266,7 @@ void swapNodes(){
 
 };
 
-int main(){
+ int main(){
   LinkedList li;
   cout<<"Inserting nodes..."<<endl;
   // li.insertNode(8);
@@ -284,7 +284,7 @@ int main(){
   // li.insertNode(1);
   // li.insertNode(3); 
   // li.insertNode(4);
-  // li.insertNode(3);
+  // li.insertNode(2);
   // li.insertNode(1);
   // li.displayList();
   // cout<<endl;
@@ -303,28 +303,26 @@ int main(){
   // li.displayList();
   
   // li.insertNode(8);
-  // li.insertNode(3); 
+  // li.insertNode(4); 
   // li.insertNode(3);
-  // li.insertNode(2);
+  // li.insertNode(7);
   // li.insertNode(2);
   // li.displayList();
   // cout<<endl;
   // li.removeDuplicates();
   // li.displayList();
- 
-  // li.insertNode(6);
-  // li.insertNode(5);
-  // li.insertNode(8);
-  // li.insertNode(4);
-  // li.insertNode(2);
-  // li.insertNode(1);
-  // li.displayList();
-  // cout<<endl;
-  // li.swapNodes();
-  // li.displayList();
+
+// li.insertNode(0);
+//   li.insertNode(2);
+//   li.insertNode(3);
+//   li.insertNode(2);
+//   li.insertNode(6);
+//   li.displayList();
+//   cout<<endl;
+//   li.swapNodes();
+//   li.displayList();
 
 
-  
   // li.insertNode(0);
   // li.insertNode(2);
   // li.insertNode(3);
@@ -334,6 +332,8 @@ int main(){
   // cout<<endl;
   // li.evenOdd();
   // li.displayList();
+  // cout<<endl;
+
 
 
   li.insertNode(0);
@@ -346,33 +346,5 @@ int main(){
   li.reverseList();
   li.displayList();
 
-
-
-
-
-  // li.makeMiddleHead(false);
-  // li.displayList();
-  // cout<<endl;
-  // li.sorting();
-  // li.displayList();
-  // cout<<endl;
-  // li.removeDuplicates();
-  // li.displayList();
-  // cout<<endl;
-  // li.swapNodes();
-  // li.displayList();
-  // li.insertNode(3);
-  // li.insertNode(4);
-// li.insertNode(1);
-// li.insertNode(2);
-// li.insertNode(3);
-// li.insertNode(4);
-// li.insertNode(5);
-// li.displayList();
-// cout<<endl;
-// li.reverseList();
-// li.displayList();
-// cout<<endl;
-//   li.evenOdd();
-//   li.displayList();
 }
+
