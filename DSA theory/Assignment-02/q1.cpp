@@ -214,10 +214,11 @@ void swapNodes(){
   
   }
   void evenOdd() {
-    Node* head1 = NULL;
-    Node* head2 = NULL;
-    Node* tail1 = NULL;
-    Node* tail2 = NULL;
+   Node* head1 = NULL;  // even list ka head
+Node* head2 = NULL;  // odd list ka head
+Node* tail1 = NULL;  // even list ka tail (last node)
+Node* tail2 = NULL;  // odd list ka tail (last node)
+
 
     Node* temp = head;
     while (temp != NULL) {
@@ -254,12 +255,12 @@ void swapNodes(){
   void reverseList(){
     Node*prev=NULL;
     Node*current=head;
-    Node*next=NULL;
+    Node*nextNode=NULL;
     while(current!=NULL){
-      next=current->next;
+      nextNode=current->next;
       current->next=prev;
       prev=current;
-      current=next;
+      current=nextNode;
     }
     head=prev;
   }
