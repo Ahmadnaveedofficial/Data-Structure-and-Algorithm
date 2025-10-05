@@ -241,15 +241,31 @@ Node* tail2 = NULL;  // odd list ka tail (last node)
         }
         temp = temp->next;
     }
-    if (tail1 != NULL) {
-        tail1->next = head2;
-        if (tail2 != NULL)
-            tail2->next = NULL;
-        head = head1;
-    } else {
-        tail2->next = NULL;
-        head = head2;
+      
+// List me saare even elements pehle,aur saare odd elements baad me honge.
+    // if (tail1 != NULL) {
+    //     tail1->next = head2;
+    //     if (tail2 != NULL)
+    //         tail2->next = NULL;
+    //     head = head1;
+    // } else {
+    //     tail2->next = NULL;
+    //     head = head2;
+    // }
+
+    // List me saare odd elements pehle,aur saare even elements baad me honge.
+    if(tail2!=NULL){
+      tail2->next=head1;
+      if(tail1!=NULL){
+        tail1->next=NULL;
+      }
+      head=head2;
+    }else{
+      tail1->next=NULL;
+      head=head1;
     }
+
+
 }
 
   void reverseList(){
@@ -324,28 +340,28 @@ Node* tail2 = NULL;  // odd list ka tail (last node)
 //   li.displayList();
 
 
-  // li.insertNode(0);
-  // li.insertNode(2);
-  // li.insertNode(3);
-  // li.insertNode(2);
-  // li.insertNode(1);
-  // li.displayList();
-  // cout<<endl;
-  // li.evenOdd();
-  // li.displayList();
-  // cout<<endl;
-
-
-
   li.insertNode(0);
-  li.insertNode(9);
+  li.insertNode(2);
   li.insertNode(3);
   li.insertNode(2);
   li.insertNode(1);
   li.displayList();
   cout<<endl;
-  li.reverseList();
+  li.evenOdd();
   li.displayList();
+  cout<<endl;
+
+
+
+  // li.insertNode(0);
+  // li.insertNode(9);
+  // li.insertNode(3);
+  // li.insertNode(2);
+  // li.insertNode(1);
+  // li.displayList();
+  // cout<<endl;
+  // li.reverseList();
+  // li.displayList();
 
 }
 
