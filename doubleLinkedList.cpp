@@ -72,7 +72,7 @@ class DoublyList{
         }
     }
     void deleteAtEnd(){
-        if(head!=NULL){
+        if(tail!=NULL){
             Node* temp=tail;
             tail=tail->prev;
             tail->next=NULL;
