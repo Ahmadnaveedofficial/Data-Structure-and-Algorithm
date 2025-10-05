@@ -102,89 +102,41 @@ class Linklist{
    }
    return;
 }
-// void update(int id){
-//       if(head!=NULL){
-//         Employee* temp=head;
-//         while(temp!=NULL && temp->id!=id){
-//             temp=temp->next;
-//         }
-//       cout<<"Updating employee with ID "<<id<<endl;
-//       cout<<"Current Name: "<<temp->name<< ", Age: "<<temp->age<<", Salary: "<<temp->salary<<endl;
-//       cout<<"Enter new name: ";
-//       cin.ignore();
-//       getline(cin,temp->name);
-//       cout<<"Enter new age: ";
-//       cin>>temp->age;
-//       cout<<"enter new salary: ";
-//       cin>>temp->salary;
-//      cout<<"Employee updated successfully!"<<endl;
-        
-//       }
-// }
-
-    void update(int id) {
-        if(head == NULL) {
-            cout << "List is empty" << endl;
-            return;
+void update(int id){
+      if(head!=NULL){
+        Employee* temp=head;
+        while(temp!=NULL && temp->id!=id){
+            temp=temp->next;
         }
-        Employee* temp = head;
-        while(temp != NULL && temp->id != id) {
-            temp = temp->next;
-        }
-        if(temp == NULL) {
-            cout << "Employee with ID " << id << " not found." << endl;
-            return;
-        }
-        cout << "Updating employee with ID " << id << endl;
-        cout << "Current Name: " << temp->name << ", Age: " << temp->age << ", Salary: " << temp->salary << endl;
+      cout<<"Updating employee with ID "<<id<<endl;
+      cout<<"Current Name: "<<temp->name<< ", Age: "<<temp->age<<", Salary: "<<temp->salary<<endl;
+      cout<<"Enter new name: ";
+      cin.ignore();
+      getline(cin,temp->name);
+      cout<<"Enter new age: ";
+      cin>>temp->age;
+      cout<<"enter new salary: ";
+      cin>>temp->salary;
+     cout<<"Employee updated successfully!"<<endl;
         
-        cout << "Enter new name: ";
-        cin.ignore();
-        getline(cin, temp->name);
-        
-        cout << "Enter new age: ";
-        cin >> temp->age;
-        
-        cout << "Enter new salary: ";
-        cin >> temp->salary;
-        
-        cout << "Employee updated successfully!" << endl;
-    }
-//  void search(string name){
-//     Employee*temp=head;
-//     if(head!=NULL){
-//         while(temp!=NULL && temp->name!=name){
-//             temp=temp->next;
-//         }
-//         if(temp==NULL){
-//             cout<<"Employee not found (:)"<<endl;
-//         }else{
-//                 cout<<"Employee Name: "<<temp->name<<endl;
-//                  cout<<"Employee ID: "<<temp->id<<endl;
-//                  cout<<"Employee Age: "<<temp->age<<endl;
-//                  cout<<"Employee Salary: "<<temp->salary<<endl<<endl;
-//         }
-//     }
-//  }
-
-void search(string name) {
-    if(head == NULL) {
-        cout << "List is empty" << endl;
-        return;
-    }
-    Employee* temp = head;
-    while(temp != NULL) {
-        if(temp->name == name) {
-            cout << "Employee found:" << endl;
-            cout << "Employee Name: " << temp->name << endl;
-            cout << "Employee ID: " << temp->id << endl;
-            cout << "Employee Age: " << temp->age << endl;
-            cout << "Employee Salary: " << temp->salary << endl << endl;
-            return; // Exit after finding the first match
-        }
-        temp = temp->next;
-    }
+      }
 }
+ void search(string name){
+    Employee*temp=head;
+    if(head!=NULL){
+        while(temp!=NULL && temp->name!=name){
+            temp=temp->next;
+        }
+        if(temp==NULL){
+            cout<<"Employee not found (:)"<<endl;
+        }else{
+                cout<<"Employee Name: "<<temp->name<<endl;
+                 cout<<"Employee ID: "<<temp->id<<endl;
+                 cout<<"Employee Age: "<<temp->age<<endl;
+                 cout<<"Employee Salary: "<<temp->salary<<endl<<endl;
+        }
+    }
+ }
 };
 
 int main(){
