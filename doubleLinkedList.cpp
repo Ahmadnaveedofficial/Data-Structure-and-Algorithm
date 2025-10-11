@@ -104,6 +104,9 @@ class DoublyList{
                 if(temp2->next!=NULL){
                     temp2->next->prev=temp;
                 }
+                else{
+                    tail=temp;
+                }
                 temp2->next=NULL;
                 temp2->prev=NULL;
                 delete temp2;

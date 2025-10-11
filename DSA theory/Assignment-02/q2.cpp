@@ -76,6 +76,7 @@ class Linklist{
    }
 
 
+
    void Delete(int id){
     if(head==NULL){
         cout<<"List is empty"<<endl;
