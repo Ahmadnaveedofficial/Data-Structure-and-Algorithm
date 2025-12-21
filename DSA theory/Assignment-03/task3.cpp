@@ -46,6 +46,7 @@ public:
         top=top->next;
         delete temp;
     }
+    
      bool isBalanced(const string& str) {
         Stack s; 
         for (int i=0;i<str.length();i++) {
@@ -59,7 +60,9 @@ public:
                 }
                 char topChar=s.top->data; 
                 s.pop();
-                if ((ch==')'&&topChar!='(')||(ch==']'&&topChar!='[')||(ch=='}'&&topChar!='{')){
+                if ((ch==')'&&topChar!='(')||
+                (ch==']'&&topChar!='[')||
+                (ch=='}'&&topChar!='{')){
                     return false;
                 }
             }

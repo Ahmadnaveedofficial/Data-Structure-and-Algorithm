@@ -187,6 +187,66 @@ public:
         }
         delete temp2;
     }
+
+    void reverse(){
+        Node* current =head;
+        Node* next=NULL;
+
+        while(current!=NULL){
+            next=current->prev;
+            current->prev=current->next;
+            current->next=next;
+            current=current->prev;
+        }
+        if(next!=NULL){
+            head=next->prev;
+    }
+}
+
+// Search and Update: update marks of a node by roll number
+void searchAndUpdate(int rollNo, int newMarks) {
+    if (head == NULL) {
+        cout << "List is empty" << endl;
+        return;
+    }
+    Node* temp = head;
+    while (temp != NULL) {
+        if (temp->rollNo == rollNo) {
+            temp->marks = newMarks;
+            cout << "Updated marks of " << temp->name << " to " << newMarks << endl;
+            return;
+        }
+        temp = temp->next;
+    }
+    cout << "Node with Roll No " << rollNo << " not found" << endl;
+}
+
+// Search and Delete: delete node by roll number
+void searchAndDelete(int rollNo) {
+    if (head == NULL) {
+        cout << "List is empty" << endl;
+        return;
+    }
+    Node* temp = head;
+    while (temp != NULL) {
+        if (temp->rollNo == rollNo) {
+            if (temp == head) {
+                deleteAtStart();
+            } else if (temp == tail) {
+                deleteAtEnd();
+            } else {
+                temp->prev->next = temp->next;
+                temp->next->prev = temp->prev;
+                delete temp;
+            }
+            cout << "Deleted node with Roll No " << rollNo << endl;
+            return;
+        }
+        temp = temp->next;
+    }
+    cout << "Node with Roll No " << rollNo << " not found" << endl;
+}
+
 };
 
 int main()
@@ -213,5 +273,13 @@ int main()
     l.deleteAtPosition(2);
     l.display();
 
+    l.reverse();
+    cout << "Reversed List: " << endl;
+    l.display();
+    l.searchAndUpdate(117, 95);
+    l.display();
+    l.searchAndDelete(149);
+    l.display();
+    
     return 0;
 }
